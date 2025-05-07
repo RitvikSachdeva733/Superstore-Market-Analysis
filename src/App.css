@@ -1,38 +1,403 @@
-.App {
+/* ===== Futuristic Cyber Theme ===== */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Rajdhani:wght@400;500;600&display=swap');
+
+:root {
+  --neon-blue: #0ff0fc;
+  --neon-pink: #ff2a6d;
+  --dark-bg: #0a0a12;
+  --darker-bg: #050508;
+  --cyber-purple: #6a00f4;
+  --matrix-green: #00ff41;
+  --text-glow: 0 0 10px var(--neon-blue);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: 
+    radial-gradient(circle at 20% 30%, var(--cyber-purple), transparent 70%),
+    linear-gradient(to bottom, var(--darker-bg), var(--dark-bg));
+  font-family: 'Rajdhani', sans-serif;
+  color: #e0e0e0;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 85%;
+  max-width: 900px;
+  padding: 2.5rem;
+  text-align: center;
+  background: rgba(10, 10, 20, 0.8);
+  border: 1px solid var(--neon-blue);
+  border-image: linear-gradient(45deg, var(--neon-blue), var(--neon-pink)) 1;
+  border-radius: 0;
+  box-shadow: 
+    0 0 15px var(--neon-blue),
+    0 0 30px rgba(0, 240, 252, 0.2);
+  backdrop-filter: blur(5px);
+  position: relative;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  color: var(--neon-blue);
+  text-shadow: var(--text-glow);
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}
+
+.selectors {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+/* Futuristic Select Elements */
+/* === Updated Futuristic Cyberpunk Dropdown === */
+select {
+  padding: 0.8rem 1.2rem;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #e0e0e0;
+  background: rgba(10, 10, 20, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--neon-pink);
+  border-radius: 0.5rem;
+  box-shadow: 
+    0 0 10px var(--neon-pink),
+    0 0 20px rgba(255, 42, 109, 0.3);
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ff2a6d' stroke-width='3' stroke-linecap='square' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+  min-width: 220px;
+  transition: all 0.3s ease;
+}
+
+select:hover {
+  border-color: var(--neon-blue);
+  box-shadow: 
+    0 0 15px var(--neon-blue),
+    0 0 25px rgba(0, 240, 252, 0.5);
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--matrix-green);
+  box-shadow: 
+    0 0 20px var(--matrix-green),
+    0 0 35px rgba(0, 255, 65, 0.4);
+}
+
+/* Optional: for more cyber feel, add glowing option items (works in some browsers) */
+select option {
+  background: var(--darker-bg);
+  color: var(--neon-blue);
+}
+
+
+.container {
+  padding: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.selectors select {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #00f7ff, #ff00ff);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button:hover {
+  background: linear-gradient(135deg, #ff00ff, #00f7ff);
+}
+
+.graph-card {
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 20px #00f7ff, 0 0 40px #ff00ff;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.graph-title {
+  font-family: 'Orbitron', sans-serif;
+  color: #00f7ff;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.graph-image-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.graph-image-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.graph-image {
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.graph-image:hover {
+  transform: scale(1.02);
+}
+
+/* Cyberpunk Buttons */
+button {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+button:not(.theme-toggle) {
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0;
+  background: linear-gradient(45deg, var(--neon-blue), var(--cyber-purple));
+  color: black;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  box-shadow: 
+    0 0 10px var(--neon-blue),
+    0 0 20px rgba(0, 240, 252, 0.3);
+  z-index: 1;
+}
+
+button:not(.theme-toggle):hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 0 15px var(--neon-blue),
+    0 0 30px rgba(0, 240, 252, 0.5);
+}
+
+button:not(.theme-toggle):active {
+  transform: translateY(0);
+}
+
+button:not(.theme-toggle)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+button:not(.theme-toggle):hover::before {
+  left: 100%;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 45px;
+  height: 45px;
+  background: transparent;
+  border: 1px solid var(--neon-pink);
+  border-radius: 0;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 1.3rem;
+  color: var(--neon-pink);
+  box-shadow: 0 0 10px rgba(255, 42, 109, 0.3);
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #00f0fc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 0 0 10px rgba(0, 240, 252, 0.8);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Add these styles to your existing App.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: var(--neon-blue);
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  position: relative;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--neon-pink);
+  text-shadow: 0 0 10px var(--neon-pink);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--neon-blue);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  background: var(--neon-pink);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .nav-links {
+    margin-top: 1rem;
+    gap: 1rem;
   }
+  
+  .nav-link {
+    font-size: 1rem;
+    padding: 0.3rem 0.8rem;
+  }
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer {
+  margin-top: 4rem;
+  padding: 1.5rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -10px 30px rgba(0, 240, 252, 0.1);
+}
+
+.about-section {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem 0;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.1);
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+.about-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #00f0fc;
+}
+
+.about-text,
+.about-cta {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.about-features {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+.about-features li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.graph-card {
+  background-color: #111;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0, 240, 252, 0.2);
+  margin-top: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.graph-title {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.graph-image {
+  width: 100%;
+  max-height: 450px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  object-fit: contain;
 }

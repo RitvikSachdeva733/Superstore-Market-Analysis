@@ -1,0 +1,241 @@
+/* ===== Cyberpunk Home Page Styles ===== */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Rajdhani:wght@400;500;600&display=swap');
+
+:root {
+  --neon-blue: #0ff0fc;
+  --neon-pink: #ff2a6d;
+  --dark-bg: #0a0a12;
+  --darker-bg: #050508;
+  --cyber-purple: #6a00f4;
+  --matrix-green: #00ff41;
+  --text-glow: 0 0 10px var(--neon-blue);
+}
+
+.homepage {
+  min-height: 100vh;
+  padding: 2rem;
+  background: radial-gradient(circle at 20% 30%, var(--cyber-purple), transparent 70%), linear-gradient(to bottom, var(--darker-bg), var(--dark-bg));
+  color: #e0e0e0;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.homepage {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: #e0e0e0;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.homepage-header {
+  text-align: center;
+  padding: 3rem 1rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid rgba(0, 240, 252, 0.3);
+}
+  
+  .homepage-header h1 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--neon-blue);
+    text-shadow: var(--text-glow);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .homepage-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .homepage-nav .nav-link {
+    color: var(--neon-blue);
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid var(--neon-blue);
+    transition: all 0.3s ease;
+  }
+  
+  .homepage-nav .nav-link:hover {
+    background: rgba(0, 240, 252, 0.1);
+    box-shadow: 0 0 15px var(--neon-blue);
+  }
+  
+  /* Rest of your existing HomePage styles */
+
+.homepage-header p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.homepage-about {
+  background: rgba(10, 10, 20, 0.7);
+  border: 1px solid var(--neon-blue);
+  border-image: linear-gradient(45deg, var(--neon-blue), var(--neon-pink)) 1;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  border-radius: 0;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 20px rgba(0, 240, 252, 0.2);
+}
+
+.homepage-about h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--neon-pink);
+  text-shadow: 0 0 8px var(--neon-pink);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.homepage-about p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.homepage-cards {
+  margin: 3rem auto;
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+.homepage-cards h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--matrix-green);
+  text-shadow: 0 0 8px var(--matrix-green);
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: rgba(10, 10, 20, 0.7);
+  border: 1px solid var(--cyber-purple);
+  border-radius: 0;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(106, 0, 244, 0.3);
+  border-color: var(--neon-blue);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 1px solid var(--neon-blue);
+}
+
+.card h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--neon-blue);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.card p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+}
+
+.homepage-contact {
+  background: rgba(255, 42, 109, 0.1);
+  border: 1px solid var(--neon-pink);
+  padding: 2rem;
+  margin: 3rem auto;
+  max-width: 600px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+
+.homepage-contact h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--neon-pink);
+  text-shadow: 0 0 8px var(--neon-pink);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.homepage-contact p {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Glow effect on hover for contact info */
+.homepage-contact p:hover {
+  color: var(--neon-blue);
+  text-shadow: var(--text-glow);
+  transition: all 0.3s ease;
+}
+
+.homepage-graphs {
+  text-align: center;
+  padding: 2rem 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+.homepage-graphs h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.homepage-graphs p {
+  color: #34495e;
+  margin-bottom: 1.5rem;
+}
+
+.graph-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(45deg, #3498db, #2980b9);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.graph-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .homepage-header h1 {
+    font-size: 2rem;
+  }
+  
+  .homepage-header p {
+    font-size: 1rem;
+  }
+  
+  .homepage-about, 
+  .homepage-contact {
+    padding: 1.5rem;
+  }
+  
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
